@@ -1,0 +1,996 @@
+/* Made by Soren */
+
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background: #FFFFFF;
+    color: #1A1A1A;
+    line-height: 1.6;
+    overflow-x: hidden;
+}
+
+.lang-fa * {
+    font-family: 'Vazirmatn', sans-serif;
+}
+
+.lang-en * {
+    font-family: 'Roboto', sans-serif;
+}
+
+.lang-fa h1, .lang-fa h2, .lang-fa h3 {
+    font-family: 'Samim', sans-serif;
+}
+
+.lang-en h1, .lang-en h2, .lang-en h3 {
+    font-family: 'Lora', sans-serif;
+}
+
+.lang-fa a, .lang-fa button {
+    font-family: 'Shabnam', sans-serif;
+}
+
+.lang-en a, .lang-en button {
+    font-family: 'Open Sans', sans-serif;
+}
+
+header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    background: #FFFFFF;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.05);
+    padding: 15px 0;
+    z-index: 1000;
+}
+
+nav {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 20px;
+}
+
+nav h1 {
+    font-size: 24px;
+    color: #1A1A1A;
+    font-weight: 700;
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+    gap: 25px;
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: #1A1A1A;
+    font-weight: 400;
+    transition: color 0.2s ease;
+    cursor: pointer;
+}
+
+nav ul li a:hover {
+    color: #666;
+}
+
+.hamburger {
+    display: none;
+    font-size: 20px;
+    color: #1A1A1A;
+    cursor: pointer;
+}
+
+section {
+    max-width: 1200px;
+    margin: 60px auto;
+    padding: 20px;
+    opacity: 0;
+    transform: translateY(50px);
+    transition: opacity 0.8s ease, transform 0.8s ease;
+}
+
+section.visible {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+h2 {
+    font-size: 28px;
+    color: #1A1A1A;
+    text-align: center;
+    margin-bottom: 20px;
+    font-weight: 700;
+    opacity: 0;
+    animation: slideUpFade 0.6s ease forwards;
+}
+
+@keyframes slideUpFade {
+    from { opacity: 0; transform: translateY(20px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+#intro {
+    margin-top: 100px;
+    text-align: center;
+}
+
+#intro h1 {
+    font-size: 32px;
+    color: #1A1A1A;
+    margin-bottom: 20px;
+}
+
+#intro p {
+    max-width: 800px;
+    margin: 0 auto;
+    font-size: 16px;
+    color: #666;
+}
+
+#about {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    flex-wrap: wrap;
+    justify-content: center;
+    margin-top: 60px;
+}
+
+#about img {
+    width: 220px;
+    border-radius: 50%;
+}
+
+#about h1 {
+    margin-bottom: 20px;
+    font-size: 28px;
+}
+
+#about p {
+    max-width: 600px;
+    font-size: 16px;
+    color: #666;
+}
+
+.social-links {
+    margin-top: 15px;
+    display: flex;
+    gap: 15px;
+}
+
+.social-links a {
+    color: #1A1A1A;
+    font-size: 18px;
+    text-decoration: none;
+    transition: color 0.2s ease;
+}
+
+.social-links a:hover {
+    color: #666;
+}
+
+.divider {
+    width: 80%;
+    height: 1px;
+    background: #D3D3D3;
+    margin: 40px auto;
+    opacity: 0;
+    animation: slideUpFade 0.8s ease forwards;
+}
+
+.books-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 20px;
+}
+
+.notes-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+}
+
+.poems-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 20px;
+}
+
+.translations-grid {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.book-card {
+    background: #FFFFFF;
+    padding: 20px;
+    border: 1px solid #E0E0E0;
+    border-radius: 8px;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    height: 450px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    position: relative;
+}
+
+.lang-en .book-card {
+    background: #FFFFFF;
+    padding: 20px;
+    border: 1px solid #E0E0E0;
+    border-radius: 8px;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    height: 500px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    position: relative;
+}
+
+.lang-en .book-card h3 {
+    font-size: 16px;
+    margin: 10px 0 5px;
+    color: #1A1A1A;
+    font-weight: 700;
+}
+
+.lang-en .book-card p {
+    font-size: 12px;
+    color: #666;
+    margin: 5px 0;
+}
+
+.lang-en .book-card a {
+    display: inline-block;
+    padding: 8px 15px;
+    background: #1A1A1A;
+    color: #FFFFFF;
+    text-decoration: none;
+    border-radius: 5px;
+    font-size: 12px;
+    transition: background 0.2s ease;
+    line-height: 1;
+}
+
+.note-card, .poem-card {
+    background: #FFFFFF;
+    padding: 20px;
+    border: 1px solid #E0E0E0;
+    border-radius: 8px;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    height: 450px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    position: relative;
+}
+
+.translation-item {
+    background: #FFFFFF;
+    padding: 20px;
+    border: 1px solid #E0E0E0;
+    border-radius: 8px;
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    position: relative;
+}
+
+.book-card:hover, .note-card:hover, .poem-card:hover, .translation-item:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+.lang-en .book-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+.book-card img, .note-card img, .poem-card img {
+    width: 180px;
+    height: 240px;
+    object-fit: cover;
+    border-radius: 5px;
+    margin: 0 auto;
+}
+
+.lang-en .book-card img {
+    width: 180px;
+    height: 240px;
+    object-fit: cover;
+    border-radius: 5px;
+    margin: 0 auto;
+}
+
+.translation-item img {
+    width: 150px;
+    height: 200px;
+    object-fit: cover;
+    border-radius: 5px;
+}
+
+.poem-card video {
+    width: 180px;
+    height: 240px;
+    object-fit: cover;
+    border-radius: 5px;
+    margin: 0 auto;
+}
+
+.book-card h3, .note-card h3, .poem-card h3 {
+    font-size: 18px;
+    margin: 10px 0 5px;
+    color: #1A1A1A;
+    font-weight: 700;
+}
+
+.translation-item h3 {
+    font-size: 20px;
+    margin: 0 0 5px;
+    color: #1A1A1A;
+    font-weight: 700;
+}
+
+.lang-en .translation-item h3 {
+    font-size: 18px;
+}
+
+.book-card p, .note-card p, .poem-card p {
+    font-size: 14px;
+    color: #666;
+    margin: 5px 0;
+}
+
+.translation-item .content {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+}
+
+.translation-item p {
+    font-size: 15px;
+    color: #666;
+    margin: 0;
+    line-height: 1.4;
+}
+
+.lang-en .translation-item p {
+    font-size: 13px;
+}
+
+.translation-item p:first-of-type {
+    font-size: 14px;
+    color: #444;
+    font-weight: 500;
+}
+
+.lang-en .translation-item p:first-of-type {
+    font-size: 12px;
+}
+
+.translation-item a {
+    display: inline-block;
+    padding: 8px 15px;
+    background: #1A1A1A;
+    color: #FFFFFF;
+    text-decoration: none;
+    border-radius: 5px;
+    font-size: 14px;
+    font-weight: 500;
+    transition: background 0.2s ease;
+    align-self: flex-start;
+    margin-top: 15px;
+}
+
+.lang-en .translation-item a {
+    font-size: 12px;
+}
+
+.translation-item a:hover {
+    background: #333;
+}
+
+.card-footer {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+    margin-top: auto;
+    padding-top: 10px;
+}
+
+.book-card a, .note-card a, .poem-card a {
+    display: inline-block;
+    padding: 8px 15px;
+    background: #1A1A1A;
+    color: #FFFFFF;
+    text-decoration: none;
+    border-radius: 5px;
+    font-size: 14px;
+    transition: background 0.2s ease;
+    line-height: 1;
+}
+
+.lang-en .book-card a:hover {
+    background: #333;
+}
+
+.book-card a:hover, .note-card a:hover, .poem-card a:hover {
+    background: #333;
+}
+
+audio {
+    width: 100%;
+    max-width: 300px;
+    height: 50px;
+}
+
+.contact-card {
+    background: #FFFFFF;
+    padding: 20px;
+    border: 1px solid #E0E0E0;
+    border-radius: 8px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.contact-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+#contact input[type="text"],
+#contact input[type="email"] {
+    padding: 10px;
+    border: 1px solid #E0E0E0;
+    border-radius: 5px;
+    font-size: 14px;
+    background: #F9F9F9;
+    width: 100%;
+    margin-bottom: 10px;
+}
+
+#contact textarea {
+    padding: 10px;
+    border: 1px solid #E0E0E0;
+    border-radius: 5px;
+    font-size: 14px;
+    background: #F9F9F9;
+    width: 100%;
+    margin-bottom: 10px;
+}
+
+#contact button {
+    padding: 10px 20px;
+    background: #1A1A1A;
+    color: #FFFFFF;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background 0.2s ease;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+}
+
+#contact button i {
+    font-size: 14px;
+}
+
+#contact button:hover {
+    background: #333;
+}
+
+footer {
+    background: #1A1A1A;
+    color: #B0BEC5;
+    text-align: center;
+    padding: 15px 0;
+    font-size: 14px;
+    border-top: 1px solid #D3D3D3;
+}
+
+footer p {
+    margin: 5px 0;
+}
+
+h1 {
+    color: #1A1A1A;
+    font-size: 28px;
+}
+
+p {
+    color: #666;
+    font-size: 15px;
+    line-height: 1.6;
+}
+
+#notification {
+    position: fixed;
+    top: 70px;
+    left: 50%;
+    transform: translateX(-50%) scale(0.8);
+    background: linear-gradient(135deg, #2c3e50, #1a252f);
+    color: #FFFFFF;
+    padding: 12px 24px;
+    border-radius: 8px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
+    z-index: 2000;
+    opacity: 0;
+    font-size: 14px;
+    font-weight: 500;
+    letter-spacing: 0.5px;
+    transition: transform 0.3s ease, opacity 0.3s ease, box-shadow 0.3s ease;
+}
+
+#notification.show {
+    opacity: 1;
+    transform: translateX(-50%) scale(1);
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.4);
+    animation: popIn 0.5s ease forwards, shake 0.3s ease 0.5s, fadeOut 0.5s ease 2.5s forwards;
+}
+
+@keyframes popIn {
+    0% {
+        transform: translateX(-50%) scale(0.8);
+        opacity: 0;
+    }
+    60% {
+        transform: translateX(-50%) scale(1.05);
+        opacity: 1;
+    }
+    100% {
+        transform: translateX(-50%) scale(1);
+        opacity: 1;
+    }
+}
+
+@keyframes shake {
+    0%, 100% {
+        transform: translateX(-50%) scale(1);
+    }
+    25% {
+        transform: translateX(-54%) scale(1);
+    }
+    50% {
+        transform: translateX(-46%) scale(1);
+    }
+    75% {
+        transform: translateX(-52%) scale(1);
+    }
+}
+
+@keyframes fadeOut {
+    0% {
+        opacity: 1;
+        transform: translateX(-50%) scale(1);
+    }
+    100% {
+        opacity: 0;
+        transform: translateX(-50%) scale(0.8);
+    }
+}
+
+#about p {
+    margin-bottom: 15px;
+}
+
+.dots {
+    display: none;
+    text-align: center;
+    margin: 10px 0;
+}
+
+.dot {
+    display: inline-block;
+    width: 10px;
+    height: 10px;
+    background: #D3D3D3;
+    border-radius: 50%;
+    margin: 0 5px;
+    cursor: pointer;
+    transition: background 0.3s ease, transform 0.3s ease;
+}
+
+.dot:hover {
+    transform: scale(1.2);
+}
+
+.dot.active {
+    background: #1A1A1A;
+    transform: scale(1.2);
+}
+
+@media (max-width: 768px) {
+    nav ul {
+        display: none;
+        flex-direction: column;
+        position: absolute;
+        top: 0;
+        right: 0;
+        background: #FFFFFF;
+        width: 100%;
+        padding: 15px;
+        box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+        transform: translateY(-100%);
+        transition: transform 0.4s ease-in-out;
+    }
+    nav ul.active {
+        display: flex;
+        transform: translateY(50px);
+    }
+    @keyframes slideDown {
+        from { transform: translateY(-100%); opacity: 0; }
+        to { transform: translateY(50px); opacity: 1; }
+    }
+    @keyframes slideUp {
+        from { transform: translateY(50px); opacity: 1; }
+        to { transform: translateY(-100%); opacity: 0; }
+    }
+    nav ul.opening {
+        animation: slideDown 0.4s ease-in-out forwards;
+    }
+    nav ul.closing {
+        animation: slideUp 0.4s ease-in-out forwards;
+    }
+    .hamburger {
+        display: block;
+    }
+    #intro {
+        margin-top: 80px;
+    }
+    #about {
+        flex-direction: column;
+        text-align: center;
+    }
+    #about img {
+        width: 180px;
+    }
+    .books-grid, .poems-grid, .notes-grid {
+        position: relative;
+        height: 450px;
+        overflow: hidden;
+        padding: 0 10px;
+    }
+    .books-grid .book-card, .poems-grid .poem-card, .notes-grid .note-card {
+        position: absolute;
+        width: 100%;
+        top: 0;
+        left: 0;
+        opacity: 0;
+        transform: translateX(100%);
+        transition: opacity 0.4s ease, transform 0.4s ease;
+    }
+    .books-grid .book-card.active, .poems-grid .poem-card.active, .notes-grid .note-card.active {
+        opacity: 1;
+        transform: translateX(0);
+    }
+    .dots {
+        display: block;
+    }
+    .translations-grid {
+        display: flex;
+        flex-direction: column;
+        gap: 20px;
+    }
+    .translation-item {
+        display: flex;
+        flex-direction: column;
+        height: 450px;
+        text-align: center;
+        padding: 20px;
+        border: 1px solid #E0E0E0;
+        border-radius: 8px;
+        background: #FFFFFF;
+    }
+    .translation-item img {
+        width: 180px;
+        height: 240px;
+        object-fit: cover;
+        border-radius: 5px;
+        margin: 0 auto;
+        order: 1;
+    }
+    .translation-item .content {
+        display: flex;
+        flex-direction: column;
+        gap: 5px;
+        order: 2;
+    }
+    .translation-item h3 {
+        font-size: 18px;
+        margin: 10px 0 5px;
+        color: #1A1A1A;
+        font-weight: 700;
+    }
+    .translation-item p {
+        font-size: 14px;
+        color: #666;
+        margin: 5px 0;
+    }
+    .translation-item a {
+        display: inline-block;
+        padding: 8px 15px;
+        background: #1A1A1A;
+        color: #FFFFFF;
+        text-decoration: none;
+        border-radius: 5px;
+        font-size: 14px;
+        transition: background 0.2s ease;
+        align-self: center;
+        margin-top: 10px;
+        order: 3;
+    }
+    h1 { font-size: 24px; }
+    h2 { font-size: 22px; }
+    p { font-size: 14px; }
+}
+
+@media (min-width: 769px) and (max-width: 1024px) {
+    .books-grid, .poems-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+    .notes-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+    h1 { font-size: 26px; }
+    h2 { font-size: 24px; }
+}
+
+@media (min-width: 769px) {
+    .slider-nav {
+        display: none !important;
+    }
+    .book-card, .poem-card, .note-card, .translation-item {
+        transition: transform 0.4s ease-out, box-shadow 0.4s ease-out !important;
+    }
+    .book-card:hover, .poem-card:hover, .note-card:hover, .translation-item:hover {
+        transform: translateY(-5px) scale(1.03);
+        box-shadow: 0 12px 24px rgba(0, 0, 0, 0.25);
+        z-index: 10;
+    }
+    .lang-en .book-card:hover {
+        transform: translateY(-5px) scale(1.03);
+        box-shadow: 0 12px 24px rgba(0, 0, 0, 0.25);
+        z-index: 10;
+    }
+}
+
+#gallery .gallery-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+}
+
+#gallery .gallery-card {
+    background: #FFFFFF;
+    padding: 15px;
+    border: 1px solid #E0E0E0;
+    border-radius: 8px;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    height: 384px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    position: relative;
+}
+
+#gallery .gallery-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+#gallery .gallery-card img {
+    width: 100%;
+    height: 350px;
+    object-fit: cover;
+    border-radius: 5px;
+    margin: 0 auto;
+}
+
+#gallery .gallery-card h3 {
+    font-size: 18px;
+    margin: 10px 0 5px;
+    color: #1A1A1A;
+    font-weight: 700;
+}
+
+#gallery .gallery-card p {
+    font-size: 14px;
+    color: #666;
+    margin: 0;
+}
+
+@media (max-width: 768px) {
+    #gallery .gallery-grid {
+        position: relative;
+        height: 450px;
+        overflow: hidden;
+        padding: 0 10px;
+    }
+    #gallery .gallery-card {
+        position: absolute;
+        width: 100%;
+        top: 0;
+        left: 0;
+        opacity: 0;
+        transform: translateX(100%);
+        transition: opacity 0.4s ease, transform 0.4s ease;
+    }
+    #gallery .gallery-card.active {
+        opacity: 1;
+        transform: translateX(0);
+    }
+    #gallery .gallery-card img {
+        height: 350px;
+    }
+}
+
+@media (min-width: 769px) and (max-width: 1024px) {
+    #gallery .gallery-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (min-width: 769px) {
+    #gallery .gallery-card {
+        transition: transform 0.4s ease-out, box-shadow 0.4s ease-out !important;
+    }
+    #gallery .gallery-card:hover {
+        transform: translateY(-5px) scale(1.03);
+        box-shadow: 0 12px 24px rgba(0, 0, 0, 0.25);
+        z-index: 10;
+    }
+}
+
+#donate {
+    margin-top: 60px;
+}
+
+.donate-grid {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.donate-item {
+    background: #FFFFFF;
+    padding: 20px;
+    border: 1px solid #E0E0E0;
+    border-radius: 8px;
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    position: relative;
+}
+
+.donate-item:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+.donate-icon {
+    width: 140px; 
+    height: 180px; 
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: #F9F9F9;
+    border-radius: 5px;
+    flex-shrink: 0;
+}
+
+.donate-icon i {
+    font-size: 40px;
+    color: #1A1A1A; 
+}
+
+.donate-item .content {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+}
+
+.donate-item h3 {
+    font-size: 20px;
+    margin: 0 0 5px;
+    color: #1A1A1A;
+    font-weight: 700;
+}
+
+.lang-en .donate-item h3 {
+    font-size: 18px;
+}
+
+.donate-item p {
+    font-size: 15px;
+    color: #666;
+    margin: 0;
+    line-height: 1.4;
+}
+
+.lang-en .donate-item p {
+    font-size: 13px;
+}
+
+.donate-item p:first-of-type {
+    font-size: 14px;
+    color: #444;
+    font-weight: 500;
+}
+
+.lang-en .donate-item p:first-of-type {
+    font-size: 12px;
+}
+
+.donate-item .donate-btn {
+    display: inline-block;
+    padding: 8px 15px;
+    background: #1A1A1A;
+    color: #FFFFFF;
+    text-decoration: none;
+    border-radius: 5px;
+    font-size: 14px;
+    font-weight: 500;
+    transition: background 0.2s ease;
+    align-self: flex-start;
+    margin-top: 20px;
+}
+
+.lang-en .donate-item .donate-btn {
+    font-size: 12px;
+}
+
+.donate-item .donate-btn:hover {
+    background: #333;
+}
+
+@media (max-width: 768px) {
+    .donate-item {
+        flex-direction: column;
+        height: auto;
+        text-align: center;
+    }
+    .donate-icon {
+        width: 80px; 
+        height: 100px;
+        margin: 0 auto;
+    }
+    .donate-item .donate-btn {
+        align-self: center;
+    }
+}
+
+@media (min-width: 769px) {
+    .donate-item {
+        transition: transform 0.4s ease-out, box-shadow 0.4s ease-out;
+    }
+    .donate-item:hover {
+        transform: translateY(-5px) scale(1.03);
+        box-shadow: 0 12px 24px rgba(0, 0, 0, 0.25);
+        z-index: 10;
+    }
+}
+i[class^="fa-"] {
+    font-family: "Font Awesome 6 Free", "Font Awesome 6 Brands" !important;
+    display: inline-block;
+}
