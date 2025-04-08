@@ -3,22 +3,23 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="سایت شخصی امین حدادی - شاعر، مترجم و منتقد ادبی | شعر، کتاب و ترجمه‌های ادبی">
+    <meta name="description" content="شعرها، ترجمه‌ها و یادداشت‌های امین حدادی - شاعر و مترجم ایرانی ساکن تهران">
     <meta name="keywords" content="امین حدادی, شعر, کتاب, ترجمه, شاعر ایرانی, ادبیات, روان‌شناسی">
     <meta name="robots" content="index, follow">
     <meta name="author" content="امین حدادی - Amin Haddadi">
     <title>امین حدادی</title>
 
-    <link href="https://fonts.googleapis.com/css2?family=Vazirmatn:wght@400;700&family=Samim:wght@400;700&family=Shabnam:wght@400;700&display=swap" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&family=Lora:wght@400;700&family=Open+Sans:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="preload" href="https://fonts.googleapis.com/css2?family=IRANSans:wght@400;700&display=swap" as="style" onload="this.rel='stylesheet'">
+    <link rel="preload" href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" as="style" onload="this.rel='stylesheet'">
+    <link rel="preload" href="images/profile.jpg" as="image">
     <link rel="stylesheet" href="fontawesome/css/all.min.css">
     <link rel="dns-prefetch" href="//fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link rel="dns-prefetch" href="//cdnjs.cloudflare.com">
     <link rel="icon" href="favicon.ico" type="image/x-icon">
-    <link rel="alternate" hreflang="fa" href="https://aminhadadi.com/" />
-    <link rel="alternate" hreflang="en" href="https://aminhadadi.com/?lang=en" />
-    <link rel="canonical" href="https://aminhadadi.com/" />
+    <link rel="alternate" hreflang="fa" href="https://aminhadadi.com/">
+    <link rel="alternate" hreflang="en" href="https://aminhadadi.com/?lang=en">
+    <link rel="canonical" href="https://aminhadadi.com/">
 
     <meta property="og:title" content="امین حدادی - Amin Haddadi">
     <meta property="og:image" content="https://aminhadadi.com/images/profile.jpg">
@@ -31,7 +32,6 @@
     window.dataLayer = window.dataLayer || [];
     function gtag(){dataLayer.push(arguments);}
     gtag('js', new Date());
-
     gtag('config', 'G-PMEFXY377Z');
     </script>
 
@@ -39,30 +39,31 @@
 </head>
 <body>
     <header>
-        <nav>
+        <nav role="navigation" aria-label="منوی اصلی">
             <div class="lang-fa"><h1>امین حدادی</h1></div>
-            <div class="lang-en" style="display: none;"><h1>Amin Haddadi</h1></div>
+            <div class="lang-en hidden"><h1>Amin Haddadi</h1></div>
             <ul>
-                <li><a href="#about" class="lang-fa">درباره من</a><a href="#about" class="lang-en" style="display: none;">About Me</a></li>
-                <li><a href="#books" class="lang-fa">کتاب‌ها</a><a href="#books" class="lang-en" style="display: none;">Books</a></li>
-                <li><a href="#poems" class="lang-fa">شعرها</a><a href="#poems" class="lang-en" style="display: none;">Poems</a></li>
-                <li><a href="#translations" class="lang-fa">ترجمه‌ها</a><a href="#translations" class="lang-en" style="display: none;">Translations</a></li>
-                <li><a href="#notes" class="lang-fa">یادداشت‌ها</a><a href="#notes" class="lang-en" style="display: none;">Notes</a></li>
-                <li><a href="#gallery" class="lang-fa">گالری</a><a href="#gallery" class="lang-en" style="display: none;">Gallery</a></li>
-                <li><a href="#contact" class="lang-fa">تماس</a><a href="#contact" class="lang-en" style="display: none;">Contact</a></li>
-                <li><a href="#" id="lang-fa" class="lang-fa">English</a><a href="#" id="lang-en" class="lang-en" style="display: none;">فارسی</a></li>
+                <li><a href="#about" class="lang-fa">درباره من</a><a href="#about" class="lang-en hidden">About Me</a></li>
+                <li><a href="#books" class="lang-fa">کتاب‌ها</a><a href="#books" class="lang-en hidden">Books</a></li>
+                <li><a href="#poems" class="lang-fa">شعرها</a><a href="#poems" class="lang-en hidden">Poems</a></li>
+                <li><a href="#translations" class="lang-fa">ترجمه‌ها</a><a href="#translations" class="lang-en hidden">Translations</a></li>
+                <li><a href="#notes" class="lang-fa">یادداشت‌ها</a><a href="#notes" class="lang-en hidden">Notes</a></li>
+                <li><a href="#gallery" class="lang-fa">گالری</a><a href="#gallery" class="lang-en hidden">Gallery</a></li>
+                <li><a href="#contact" class="lang-fa">تماس</a><a href="#contact" class="lang-en hidden">Contact</a></li>
+                <li><a href="#" id="lang-fa" class="lang-fa">English</a><a href="#" id="lang-en" class="lang-en hidden">فارسی</a></li>
             </ul>
-            <div class="hamburger">☰</div>
+            <div class="hamburger" role="button" aria-label="باز کردن منو">☰</div>
         </nav>
     </header>
     <div id="notification" class="notification"></div>
-    <section id="intro"></section>
     
+    <div class="spacer" style="height: 150px;"></div>
+
     <section id="about">
-        <img src="images/profile.jpg" alt="امین حدادی | Amin Haddadi">
+        <img src="images/profile.jpg" alt="عکس امین حدادی - شاعر و مترجم ایرانی" loading="lazy" width="300" height="300">
         <div class="lang-fa">
             <h1>امین حدادی | شعر و شاعری</h1>
-            <p>امین حدادی (متولد شهریور ۱۳۷۱) شاعر و مترجم و منتقد ادبی، ساکن تهران است. از او کتاب‌های «زخم‌های باز و ملال تهران» در نشر افراز؛ «تراشکاری فلز آینده؛ چهار پاره و یک آنتولوژی از پرتره مجید نفیسی» در نشر بارو؛ و «منظومه اذن دخول» در نشر بارو منتشر شده است. «گفت‌وگو با نطفه» آخرین کتاب شعر اوست که به‌ صورت ناشر-مولف (بیرق‌ها و لکه‌ها) منتشر شده است. شماری از مقالات و ترجمه‌های او در جراید و مجلات ادبی‌ کاغذی و مجازی منتشر شده است.</p>
+            <p>امین حدادی (متولد شهریور ۱۳۷۱) شاعر و مترجم و منتقد ادبی، ساکن تهران است. از او کتاب‌های <a href="#books">«زخم‌های باز و ملال تهران»</a> در نشر افراز؛ «تراشکاری فلز آینده؛ چهار پاره و یک آنتولوژی از پرتره مجید نفیسی» در نشر بارو؛ و «منظومه اذن دخول» در نشر بارو منتشر شده است. «گفت‌وگو با نطفه» آخرین کتاب شعر اوست که به‌صورت ناشر-مولف (بیرق‌ها و لکه‌ها) در سال ۱۴۰۴ منتشر خواهد شد. شماری از مقالات و ترجمه‌های او در جراید و مجلات ادبی‌ کاغذی و مجازی منتشر شده است.</p>
             <p>حدادی دانش‌آموختهٔ روان‌شناسیِ شناختی است و در زمینه روان‌درمانی اشتغال دارد.</p>
             <div class="social-links">
                 <a href="https://instagram.com/amin.hadadi71/" target="_blank" title="اینستاگرام"><i class="fa-brands fa-instagram"></i></a>
@@ -70,21 +71,21 @@
                 <a href="mailto:amin.haddadi@example.com" target="_blank" title="ایمیل"><i class="fa-solid fa-envelope"></i></a>
             </div>
         </div>
-        <div class="lang-en" style="display: none;">
+        <div class="lang-en hidden">
             <h1>Amin Haddadi | Poetry and Poethood</h1>
-            <p>Amin Haddadi (born September 1992) is a poet, translator, and literary critic based in Tehran. His published works include "Open Wounds and the Melancholy of Tehran" by Afraz Publishing; "Lathe Working the Metal of the Future: Four Fragments and an Anthology of Majid Naficy’s Portrait" by Baroo Publishing; and "The Entrance Permission Cycle" by Baroo Publishing. His latest poetry book, "Conversations with Spawn," has been self-published by "Banners and Stains". Several of his articles and translations have appeared in literary journals, both printed and online.</p>
+            <p>Amin Haddadi (born September 1992) is a poet, translator, and literary critic based in Tehran. His published works include <a href="#books">"Open Wounds and the Melancholy of Tehran"</a> by Afraz Publishing; "Lathe Working the Metal of the Future: Four Fragments and an Anthology of Majid Naficy’s Portrait" by Baroo Publishing; and "The Entrance Permission Cycle" by Baroo Publishing. His latest poetry book, "Conversation with the Embryo," will be self-published by "Banners and Stains" in 2025. Several of his articles and translations have appeared in literary journals, both printed and online.</p>
             <p>Haddadi is a graduate of cognitive psychology and works in the field of psychotherapy.</p>
             <div class="social-links">
                 <a href="https://instagram.com/amin.hadadi71/" target="_blank" title="Instagram"><i class="fa-brands fa-instagram"></i></a>
                 <a href="https://t.me/Baruwiki" target="_blank" title="Telegram"><i class="fa-brands fa-telegram"></i></a>
-                <a href="mailto:amin.haddadi@example.com" target="_blank" title="Email"><i class="fa-solid fa-envelope"></i></a>
+                <a href="mailto:amin.hadadi@example.com" target="_blank" title="Email"><i class="fa-solid fa-envelope"></i></a>
             </div>
         </div>
     </section>
     <div class="divider"></div>
     <section id="books">
         <div class="lang-fa"><h2>کتاب‌ها</h2></div>
-        <div class="lang-en" style="display: none;"><h2>Books</h2></div>
+        <div class="lang-en hidden"><h2>Books</h2></div>
         <div class="dots">
             <span class="dot active" data-index="0"></span>
             <span class="dot" data-index="1"></span>
@@ -93,7 +94,7 @@
         </div>
         <div class="books-grid">
             <div class="book-card active">
-                <img src="images/book1.jpg" alt="از زخم‌های باز و ملال تهران | Open Wounds and Tehran’s Melancholy">
+                <img src="images/book1.jpg" alt="کتاب از زخم‌های باز و ملال تهران اثر امین حدادی" loading="lazy" width="200" height="300">
                 <div class="lang-fa">
                     <h3>از زخم‌های باز و ملال تهران</h3>
                     <p>شعری درباره زخم‌ها و ملال شهر تهران.</p>
@@ -102,8 +103,8 @@
                         <a href="https://www.iranketab.ir/book/64612-az-zakhm-haye-baz-va-malal-e-tehran" target="_blank">خرید کتاب</a>
                     </div>
                 </div>
-                <div class="lang-en" style="display: none;">
-                    <h3>On open wounds and melancholy of Tehran</h3>
+                <div class="lang-en hidden">
+                    <h3>Open Wounds and the Melancholy of Tehran</h3>
                     <p>Amin Haddadi | Afraz Publishing, 2021</p>
                     <div class="card-footer">
                         <a href="https://www.iranketab.ir/book/64612-az-zakhm-haye-baz-va-malal-e-tehran" target="_blank">Buy the Book</a>
@@ -111,7 +112,7 @@
                 </div>
             </div>
             <div class="book-card">
-                <img src="images/book2.jpg" alt="تراشکاری فلز آینده | Lathe Working the Metal of the Future">
+                <img src="images/book2.jpg" alt="کتاب تراشکاری فلز آینده اثر امین حدادی" loading="lazy" width="200" height="300">
                 <div class="lang-fa">
                     <h3>تراشکاری فلز آینده</h3>
                     <p>چهار پاره و آنتولوژی از پرتره‌ها.</p>
@@ -120,16 +121,16 @@
                         <a href="files/Tarashkariye Feleze Ayande.pdf" download>دانلود PDF</a>
                     </div>
                 </div>
-                <div class="lang-en" style="display: none;">
+                <div class="lang-en hidden">
                     <h3>Lathe Working the Metal of the Future</h3>
-                    <p>Amin Haddadi | Baru Publishing, 2019</p>
+                    <p>Amin Haddadi | Baroo Publishing, 2019</p>
                     <div class="card-footer">
                         <a href="files/Tarashkariye Feleze Ayande.pdf" download>Download PDF</a>
                     </div>
                 </div>
             </div>
             <div class="book-card">
-                <img src="images/book3.jpg" alt="منظومه اذن دخول | The Entrance Permission Cycle">
+                <img src="images/book3.jpg" alt="کتاب منظومه اذن دخول اثر امین حدادی" loading="lazy" width="200" height="300">
                 <div class="lang-fa">
                     <h3>منظومه اذن دخول</h3>
                     <p>زیارت‌نامه‌ها و پرسه در نامکان‌ها.</p>
@@ -138,16 +139,16 @@
                         <a href="files/کتاب_اذن_دخول_امین_حدادی.pdf" download>دانلود PDF</a>
                     </div>
                 </div>
-                <div class="lang-en" style="display: none;">
+                <div class="lang-en hidden">
                     <h3>The Entrance Permission Cycle</h3>
-                    <p>Amin Haddadi | Baru 2023</p>
+                    <p>Amin Haddadi | Baroo Publishing, 2023</p>
                     <div class="card-footer"> 
                         <a href="files/کتاب_اذن_دخول_امین_حدادی.pdf" download>Download PDF</a>
                     </div>
                 </div>
             </div>
             <div class="book-card">
-                <img src="images/book4.jpg" alt="گفت‌وگو با نطفه | Conversation with the Embryo">
+                <img src="images/book4.jpg" alt="کتاب گفت‌وگو با نطفه اثر امین حدادی" loading="lazy" width="200" height="300">
                 <div class="lang-fa">
                     <h3>گفت‌وگو با نطفه</h3>
                     <p>شعری همراه با دو نامه ناتمام.</p>
@@ -156,9 +157,9 @@
                         <a href="files/book4.pdf" download>به زودی ...</a>
                     </div>
                 </div>
-                <div class="lang-en" style="display: none;">
-                    <h3>Dialogue with the Germen</h3>
-                    <p>Amin Haddadi | Beyraqhā va Lakkehā 2025</p>
+                <div class="lang-en hidden">
+                    <h3>Conversation with the Embryo</h3>
+                    <p>Amin Haddadi | Banners and Stains, 2025</p>
                     <div class="card-footer">
                         <a href="files/book4.pdf" download>Coming Soon ...</a>
                     </div>
@@ -168,7 +169,7 @@
     </section>
     <section id="poems">
         <div class="lang-fa"><h2>شعرها</h2></div>
-        <div class="lang-en" style="display: none;"><h2>Poems</h2></div>
+        <div class="lang-en hidden"><h2>Poems</h2></div>
         <div class="dots">
             <span class="dot active" data-index="0"></span>
             <span class="dot" data-index="1"></span>
@@ -177,7 +178,7 @@
         </div>
         <div class="poems-grid">
             <div class="poem-card active">
-                <video controls preload="metadata">
+                <video controls preload="metadata" loading="lazy" width="400" height="225">
                     <source src="images/poem1-video.mp4" type="video/mp4">
                 </video>
                 <div class="lang-fa">
@@ -185,16 +186,15 @@
                     <p>اکفراسیس‌های سه‌زبانه در گالری.</p>
                     <p>امین حدادی | گالری دوست، ۱۴۰۴</p>
                 </div>
-                <div class="lang-en" style="display: none;">
-                    <h3>The Prism of the Wound of light</h3>
-                    <p>Trilingual ekphrasis:</p>
-                    <p>Persian-English-French</p>
+                <div class="lang-en hidden">
+                    <h3>The Prism of the Wound of Light</h3>
+                    <p>Trilingual ekphrasis: Persian-English-French</p>
                     <p>Amin Haddadi | 2022-2025, curated by Doost Gallery</p>
                 </div>
                 <div class="card-footer"></div>
             </div>
             <div class="poem-card">
-                <img src="images/poem2.jpg" alt="بهاریه به‌رغم وحشت | Spring Poem Despite Fear">
+                <img src="images/poem2.jpg" alt="شعر بهاریه به‌رغم وحشت اثر امین حدادی" loading="lazy" width="200" height="300">
                 <div class="lang-fa">
                     <h3>بهاریه به‌رغم وحشت</h3>
                     <p>شعر و صدای شاعر برای نوروز.</p>
@@ -203,16 +203,16 @@
                         <audio controls preload="metadata" src="files/poem2.mp3"></audio>
                     </div>
                 </div>
-                <div class="lang-en" style="display: none;">
+                <div class="lang-en hidden">
                     <h3>A Spring Ode Despite the Horror</h3>
-                    <p>Poem and voice by Amin Haddadi | Nowruz 2024 | Baru</p>
+                    <p>Poem and voice by Amin Haddadi | Nowruz 2024 | Baroo</p>
                     <div class="card-footer">
                         <audio controls preload="metadata" src="files/poem2.mp3"></audio>
                     </div>
                 </div>
             </div>
             <div class="poem-card">
-                <img src="images/poem3.jpg" alt="گُل‌زخم یا گوشتِ اضافی حافظه | Scar Flower or Excess Memory Flesh">
+                <img src="images/poem3.jpg" alt="شعر گُل‌زخم یا گوشتِ اضافی حافظه اثر امین حدادی" loading="lazy" width="200" height="300">
                 <div class="lang-fa">
                     <h3>گُل‌زخم یا گوشتِ اضافی حافظه</h3>
                     <p>شعری درباره زخم و حافظه.</p>
@@ -221,24 +221,24 @@
                         <audio controls preload="metadata" src="files/poem3.mp3"></audio>
                     </div>
                 </div>
-                <div class="lang-en" style="display: none;">
-                    <h3>Flowerwound or the proud flesh of memory</h3>
-                    <p>Amin Haddadi | 2018</p>
+                <div class="lang-en hidden">
+                    <h3>Flowerwound or the Proud Flesh of Memory</h3>
+                    <p>Amin Haddadi | Baroo, 2018</p>
                     <div class="card-footer">
                         <audio controls preload="metadata" src="files/poem3.mp3"></audio>
                     </div>
                 </div>
             </div>
             <div class="poem-card">
-                <img src="images/poem4.jpg" alt="در گزارشِ تصویر | In the Image Report">
+                <img src="images/poem4.jpg" alt="شعر در گزارشِ تصویر اثر امین حدادی" loading="lazy" width="200" height="300">
                 <div class="lang-fa">
                     <h3>در گزارشِ تصویر</h3>
                     <p>شعری درباره تصویر و گزارش.</p>
                     <p>امین حدادی | بارو، ۱۴۰۳</p>
                 </div>
-                <div class="lang-en" style="display: none;">
+                <div class="lang-en hidden">
                     <h3>In the Image Report</h3>
-                    <p>Amin Haddadi | November 4, 2024</p>
+                    <p>Amin Haddadi | Baroo, November 4, 2024</p>
                 </div>
                 <div class="card-footer"></div>
             </div>
@@ -246,7 +246,7 @@
     </section>
     <section id="translations">
         <div class="lang-fa"><h2>ترجمه‌ها</h2></div>
-        <div class="lang-en" style="display: none;"><h2>Translations</h2></div>
+        <div class="lang-en hidden"><h2>Translations</h2></div>
         <div class="translations-grid">
             <div class="translation-item">
                 <div class="content">
@@ -256,14 +256,14 @@
                         <p>ترجمه امین حدادی | بارو، ۱۴۰۲</p>
                         <a href="https://baru.ir/mag-contents/booklet-of-six-poems/" target="_blank">خواندن ترجمه</a>
                     </div>
-                    <div class="lang-en" style="display: none;">
+                    <div class="lang-en hidden">
                         <h3>An Anthology of Six Poems</h3>
                         <p>Ingeborg Bachmann-Paul Celan</p>
-                        <p>Translated by Amin Haddadi | Baru, 2023</p>
+                        <p>Translated by Amin Haddadi | Baroo, 2023</p>
                         <a href="https://baru.ir/mag-contents/booklet-of-six-poems/" target="_blank">Read Translation</a>
                     </div>
                 </div>
-                <img src="images/translation1.jpg" alt="ترجمه 1 | Translation 1">
+                <img src="images/translation1.jpg" alt="ترجمه جزوه شش شعر از اینگه‌بورگ باخمان و پاول سلان" loading="lazy" width="200" height="300">
             </div>
             <div class="translation-item">
                 <div class="content">
@@ -273,20 +273,20 @@
                         <p>ترجمه امین حدادی | بارو، ۱۴۰۳</p>
                         <a href="https://baru.ir/poem/ingeborg-bachmann-seven-poems/" target="_blank">خواندن ترجمه</a>
                     </div>
-                    <div class="lang-en" style="display: none;">
+                    <div class="lang-en hidden">
                         <h3>A Selection of Seven Poems by Ingeborg Bachmann</h3>
                         <p>Seven Poems</p>
-                        <p>Translated by Amin Haddadi | Baru, 2024</p>
+                        <p>Translated by Amin Haddadi | Baroo, 2024</p>
                         <a href="https://baru.ir/poem/ingeborg-bachmann-seven-poems/" target="_blank">Read Translation</a>
                     </div>
                 </div>
-                <img src="images/translation2.jpg" alt="ترجمه 2 | Translation 2">
+                <img src="images/translation2.jpg" alt="ترجمه جزوه هفت شعر از اینگه‌بورگ باخمان" loading="lazy" width="200" height="300">
             </div>
         </div>
     </section>
     <section id="notes">
         <div class="lang-fa"><h2>یادداشت‌ها، جستارها و نامه‌ها</h2></div>
-        <div class="lang-en" style="display: none;"><h2>Notes, Essays, and Letters</h2></div>
+        <div class="lang-en hidden"><h2>Notes, Essays, and Letters</h2></div>
         <div class="dots">
             <span class="dot active" data-index="0"></span>
             <span class="dot" data-index="1"></span>
@@ -294,7 +294,7 @@
         </div>
         <div class="notes-grid">
             <div class="note-card active">
-                <img src="images/note1.jpg" alt="یادداشت 1 | Note 1">
+                <img src="images/note1.jpg" alt="یادداشت نامه‌ی شاعری جوان به شاعری جوان اثر امین حدادی" loading="lazy" width="200" height="300">
                 <div class="lang-fa">
                     <h3>نامه‌ی شاعری جوان به شاعری جوان</h3>
                     <p>پرسشی از وضعیت شعر مدرن فارسی.</p>
@@ -303,9 +303,9 @@
                         <a href="files/وضعیت_ماقبل_بودلری_شعر_فارسی.pdf" download>دانلود PDF</a>
                     </div>
                 </div>
-                <div class="lang-en" style="display: none;">
-                    <h3>A Young Poet's Letter to a Young Poem</h3>
-                    <p>A Question about the pre-baudelairean State of Modern Persian Poetry</p>
+                <div class="lang-en hidden">
+                    <h3>A Young Poet's Letter to a Young Poet</h3>
+                    <p>A Question about the Pre-Baudelairean State of Modern Persian Poetry</p>
                     <p>Amin Haddadi | Poetica Project, 2019</p>
                     <div class="card-footer">
                         <a href="files/وضعیت_ماقبل_بودلری_شعر_فارسی.pdf" download>Download PDF</a>
@@ -313,7 +313,7 @@
                 </div>
             </div>
             <div class="note-card">
-                <img src="images/note2.jpg" alt="یادداشت 2 | Note 2">
+                <img src="images/note2.jpg" alt="یادداشت در «واوِ» مربی و مهیّج اثر امین حدادی" loading="lazy" width="200" height="300">
                 <div class="lang-fa">
                     <h3>در «واوِ» مربی و مهیّج</h3>
                     <p>مواجهات ناتمام عارف و خالقی.</p>
@@ -322,9 +322,9 @@
                         <a href="files/عارف_خالقی_وزیری.pdf" download>دانلود PDF</a>
                     </div>
                 </div>
-                <div class="lang-en" style="display: none;">
-                    <h3>On the "and" of the Mentor and the Stimulus</h3>
-                    <p>Aref, Vaziri, Khaleghi: Unfinished encounters.</p>
+                <div class="lang-en hidden">
+                    <h3>On the "And" of the Mentor and the Stimulus</h3>
+                    <p>Aref, Vaziri, Khaleghi: Unfinished Encounters</p>
                     <p>Amin Haddadi | Poetica Project, 2019</p>
                     <div class="card-footer">
                         <a href="files/عارف_خالقی_وزیری.pdf" download>Download PDF</a>
@@ -332,7 +332,7 @@
                 </div>
             </div>
             <div class="note-card">
-                <img src="images/note3.jpg" alt="یادداشت 3 | Note 3">
+                <img src="images/note3.jpg" alt="یادداشت اطلسِ غربت اثر امین حدادی" loading="lazy" width="200" height="300">
                 <div class="lang-fa">
                     <h3>اطلسِ غربت</h3>
                     <p>بازبینی چند صحنه از داوودی.</p>
@@ -341,10 +341,10 @@
                         <a href="https://baru.ir/poem/the-atlas-of-roam/" target="_blank">خواندن متن</a>
                     </div>
                 </div>
-                <div class="lang-en" style="display: none;">
+                <div class="lang-en hidden">
                     <h3>Atlas of Foreignness</h3>
-                    <p>Revisiting “A Few Scenes” by Mahmoud Davoudi; poems 1991-2003, Arvij Publishing.</p>
-                    <p>Portrait of Mahmoud Davoudi</p>
+                    <p>Revisiting “A Few Scenes” by Mahmoud Davoudi; Poems 1991-2003, Arvij Publishing</p>
+                    <p>Amin Haddadi | Baroo, 2024</p>
                     <div class="card-footer">
                         <a href="https://baru.ir/poem/the-atlas-of-roam/" target="_blank">Read Text</a>
                     </div>
@@ -354,7 +354,7 @@
     </section>
     <section id="gallery">
         <div class="lang-fa"><h2>گالری</h2></div>
-        <div class="lang-en" style="display: none;"><h2>Gallery</h2></div>
+        <div class="lang-en hidden"><h2>Gallery</h2></div>
         <div class="dots">
             <span class="dot active" data-index="0"></span>
             <span class="dot" data-index="1"></span>
@@ -365,70 +365,45 @@
         </div>
         <div class="gallery-grid">
             <div class="gallery-card active">
-                <img src="images/photo1.jpg" alt="تصویر 1 | Image 1">
+                <img src="images/photo1.jpg" alt="تصویر گالری 1" loading="lazy" width="200" height="200">
             </div>
             <div class="gallery-card">
-                <img src="images/photo2.jpg" alt="تصویر 2 | Image 2">
+                <img src="images/photo2.jpg" alt="تصویر گالری 2" loading="lazy" width="200" height="200">
             </div>
             <div class="gallery-card">
-                <img src="images/photo3.jpg" alt="تصویر 3 | Image 3">
+                <img src="images/photo3.jpg" alt="تصویر گالری 3" loading="lazy" width="200" height="200">
             </div>
             <div class="gallery-card active">
-                <img src="images/photo4.jpg" alt="تصویر 4 | Image 4">
+                <img src="images/photo4.jpg" alt="تصویر گالری 4" loading="lazy" width="200" height="200">
             </div>
             <div class="gallery-card active">
-                <img src="images/photo5.jpg" alt="تصویر 5 | Image 5">
+                <img src="images/photo5.jpg" alt="تصویر گالری 5" loading="lazy" width="200" height="200">
             </div>
             <div class="gallery-card active">
-                <img src="images/photo6.jpg" alt="تصویر 6 | Image 6">
+                <img src="images/photo6.jpg" alt="تصویر گالری 6" loading="lazy" width="200" height="200">
             </div>
         </div>
     </section>
     <section id="contact">
         <div class="lang-fa"><h2>تماس</h2></div>
-        <div class="lang-en" style="display: none;"><h2>Contact</h2></div>
+        <div class="lang-en hidden"><h2>Contact</h2></div>
         <div class="contact-card">
             <form id="contact-form">
                 <div class="lang-fa">
                     <input type="text" name="name" placeholder="نام و نام خانوادگی" required>
                     <input type="email" name="email" placeholder="پست الکترونیکی (ایمیل)" required>
                     <textarea name="message" placeholder="متن پیام" rows="5" required></textarea>
-                    <button type="submit">ارسال پیام <i class="fa-solid fa-paper-plane"></i></button>
+                    <button type="submit" aria-label="ارسال پیام">ارسال پیام <i class="fa-solid fa-paper-plane"></i></button>
                 </div>
-                <div class="lang-en" style="display: none;">
+                <div class="lang-en hidden">
                     <input type="text" name="name" placeholder="Full Name" required disabled>
                     <input type="email" name="email" placeholder="Email Address" required disabled>
                     <textarea name="message" placeholder="Your Message" rows="5" required disabled></textarea>
-                    <button type="button" disabled>Contact feature is only available in Persian<i class="fa-solid fa-lock"></i></button>
+                    <button type="button" disabled aria-label="فرم تماس به زودی برای انگلیسی فعال می‌شود">English contact form coming soon <i class="fa-solid fa-lock"></i></button>
                 </div>
             </form>
         </div>
     </section>
-    <!-- <section id="donate">
-        <div class="lang-fa"><h2>حمایت مالی</h2></div>
-        <div class="lang-en" style="display: none;"><h2>Donate Me</h2></div>
-        <div class="donate-grid">
-            <div class="donate-item">
-                <div class="donate-icon">
-                    <i class="fa-solid fa-pen-nib"></i>
-                </div>
-                <div class="content">
-                    <div class="lang-fa">
-                        <h3>حمایت از خلق آثار ادبی</h3>
-                        <p>با کمک شما، می‌تونم به خلق شعرها، ترجمه‌ها و یادداشت‌های بیشتر ادامه بدم.</p>
-                        <p>هر مبلغی، قدمی برای زنده نگه داشتن ادبیاته!</p>
-                        <a href="https://" target="_blank" class="donate-btn">حمایت کن</a>
-                    </div>
-                    <div class="lang-en" style="display: none;">
-                        <h3>Support Literary Creations</h3>
-                        <p>With your support, I can continue creating more poems, translations, and notes.</p>
-                        <p>Every amount helps keep literature alive!</p>
-                        <a href="https://" target="_blank" class="donate-btn">Donate</a>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section> -->
     <footer class="footer">
         <div class="container">
             <div class="lang-fa">
@@ -437,7 +412,7 @@
                     طراحی‌شده توسط <a style="color: #B0BEC5;" href="https://github.com/TH-SOREN" target="_blank">Soren</a>
                 </p>
             </div>
-            <div class="lang-en" style="display: none;">
+            <div class="lang-en hidden">
                 <p>© 2025 Amin Haddadi | All Rights Reserved</p>
                 <p class="copyright">
                     Designed by <a style="color: #B0BEC5;" href="https://github.com/TH-SOREN" target="_blank">Soren</a>
@@ -446,6 +421,6 @@
         </div>
     </footer>
 
-    <script src="main.js"></script>
+    <script src="main.js" defer></script>
 </body>
 </html>
