@@ -6,22 +6,22 @@ window.addEventListener('load', () => {
     const urlParams = new URLSearchParams(window.location.search);
     const lang = urlParams.get('lang');
     if (lang === 'en') {
-        toggleLanguage(); 
+        toggleLanguage();
     }
 });
 
 langFaSwitch.addEventListener('click', () => {
     if (isPersian) {
-        toggleLanguage(); // تغییر به انگلیسی
-        window.history.pushState({}, document.title, '?lang=en'); // اضافه کردن ?lang=en به URL
+        toggleLanguage();
+        window.history.pushState({}, document.title, '?lang=en');
         window.scrollTo({ top: 0, behavior: 'smooth' });
     }
 });
 
 langEnSwitch.addEventListener('click', () => {
     if (!isPersian) {
-        toggleLanguage(); // تغییر به فارسی
-        window.history.pushState({}, document.title, window.location.pathname); // حذف پارامتر lang
+        toggleLanguage();
+        window.history.pushState({}, document.title, window.location.pathname);
         window.scrollTo({ top: 0, behavior: 'smooth' });
     }
 });
@@ -30,14 +30,14 @@ function toggleLanguage() {
     const faElements = document.querySelectorAll('.lang-fa');
     const enElements = document.querySelectorAll('.lang-en');
     if (isPersian) {
-        faElements.forEach(el => el.style.display = 'none');
-        enElements.forEach(el => el.style.display = 'block');
+        faElements.forEach(el => el.classList.add('hidden'));
+        enElements.forEach(el => el.classList.remove('hidden'));
         document.documentElement.setAttribute('dir', 'ltr');
         document.documentElement.setAttribute('lang', 'en');
         document.title = 'Amin Haddadi';
     } else {
-        faElements.forEach(el => el.style.display = 'block');
-        enElements.forEach(el => el.style.display = 'none');
+        faElements.forEach(el => el.classList.remove('hidden'));
+        enElements.forEach(el => el.classList.add('hidden'));
         document.documentElement.setAttribute('dir', 'rtl');
         document.documentElement.setAttribute('lang', 'fa');
         document.title = 'امین حدادی';
@@ -128,6 +128,7 @@ function showNotification(message) {
     notification.textContent = message;
     notification.classList.add('show');
 }
+
 let isMediaPlaying = false;
 let currentMedia = null;
 
@@ -212,8 +213,8 @@ function setupSlider(gridSelector, cardSelector, dotsSelector) {
     const sliderNav = document.createElement('div');
     sliderNav.className = 'slider-nav';
     sliderNav.innerHTML = `
-        <button class="prev-btn"><i class="fas fa-chevron-right"></i></button>
-        <button class="next-btn"><i class="fas fa-chevron-left"></i></button>
+        <button class="prev-btn" aria-label="اسلاید قبلی"><i class="fas fa-chevron-right"></i></button>
+        <button class="next-btn" aria-label="اسلاید بعدی"><i class="fas fa-chevron-left"></i></button>
     `;
     grid.parentNode.classList.add('slider-container');
     grid.parentNode.style.position = 'relative';
@@ -272,7 +273,7 @@ function setupSlider(gridSelector, cardSelector, dotsSelector) {
             video.addEventListener('play', () => {
                 isMediaPlaying = true;
                 clearInterval(sliderInterval);
-                video.requestFullscreen();
+                if (video.requestFullscreen) video.requestFullscreen();
             });
             video.addEventListener('pause', () => {
                 isMediaPlaying = false;
