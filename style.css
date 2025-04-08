@@ -12,7 +12,7 @@ body {
 }
 
 .lang-fa * {
-    font-family: 'Vazirmatn', sans-serif;
+    font-family: 'IRANSans', sans-serif;
 }
 
 .lang-en * {
@@ -20,19 +20,19 @@ body {
 }
 
 .lang-fa h1, .lang-fa h2, .lang-fa h3 {
-    font-family: 'Samim', sans-serif;
+    font-family: 'IRANSans', sans-serif;
 }
 
 .lang-en h1, .lang-en h2, .lang-en h3 {
-    font-family: 'Lora', sans-serif;
+    font-family: 'Roboto', sans-serif;
 }
 
 .lang-fa a, .lang-fa button {
-    font-family: 'Shabnam', sans-serif;
+    font-family: 'IRANSans', sans-serif;
 }
 
 .lang-en a, .lang-en button {
-    font-family: 'Open Sans', sans-serif;
+    font-family: 'Roboto', sans-serif;
 }
 
 header {
@@ -69,14 +69,14 @@ nav ul {
 
 nav ul li a {
     text-decoration: none;
-    color: #1A1A1A;
+    color: #4A4A4A;
     font-weight: 400;
     transition: color 0.2s ease;
     cursor: pointer;
 }
 
 nav ul li a:hover {
-    color: #666;
+    color: #6B7280;
 }
 
 .hamburger {
@@ -111,7 +111,7 @@ h2 {
 }
 
 @keyframes slideUpFade {
-    from { opacity: 0; transform: translateY(20px); }
+    from { opacity: 0; transform: translateY(10px); }
     to { opacity: 1; transform: translateY(0); }
 }
 
@@ -144,7 +144,9 @@ h2 {
 
 #about img {
     width: 220px;
+    height: 220px;
     border-radius: 50%;
+    object-fit: cover;
 }
 
 #about h1 {
@@ -165,14 +167,14 @@ h2 {
 }
 
 .social-links a {
-    color: #1A1A1A;
+    color: #4A4A4A;
     font-size: 18px;
     text-decoration: none;
     transition: color 0.2s ease;
 }
 
 .social-links a:hover {
-    color: #666;
+    color: #6B7280;
 }
 
 .divider {
@@ -252,7 +254,7 @@ h2 {
 .lang-en .book-card a {
     display: inline-block;
     padding: 8px 15px;
-    background: #1A1A1A;
+    background: #4A4A4A;
     color: #FFFFFF;
     text-decoration: none;
     border-radius: 5px;
@@ -383,7 +385,7 @@ h2 {
 .translation-item a {
     display: inline-block;
     padding: 8px 15px;
-    background: #1A1A1A;
+    background: #4A4A4A;
     color: #FFFFFF;
     text-decoration: none;
     border-radius: 5px;
@@ -399,7 +401,7 @@ h2 {
 }
 
 .translation-item a:hover {
-    background: #333;
+    background: #6B7280;
 }
 
 .card-footer {
@@ -413,7 +415,7 @@ h2 {
 .book-card a, .note-card a, .poem-card a {
     display: inline-block;
     padding: 8px 15px;
-    background: #1A1A1A;
+    background: #4A4A4A;
     color: #FFFFFF;
     text-decoration: none;
     border-radius: 5px;
@@ -423,11 +425,11 @@ h2 {
 }
 
 .lang-en .book-card a:hover {
-    background: #333;
+    background: #6B7280;
 }
 
 .book-card a:hover, .note-card a:hover, .poem-card a:hover {
-    background: #333;
+    background: #6B7280;
 }
 
 audio {
@@ -474,7 +476,7 @@ audio {
 
 #contact button {
     padding: 10px 20px;
-    background: #1A1A1A;
+    background: #4A4A4A;
     color: #FFFFFF;
     border: none;
     border-radius: 5px;
@@ -492,7 +494,7 @@ audio {
 }
 
 #contact button:hover {
-    background: #333;
+    background: #6B7280;
 }
 
 footer {
@@ -545,44 +547,18 @@ p {
 }
 
 @keyframes popIn {
-    0% {
-        transform: translateX(-50%) scale(0.8);
-        opacity: 0;
-    }
-    60% {
-        transform: translateX(-50%) scale(1.05);
-        opacity: 1;
-    }
-    100% {
-        transform: translateX(-50%) scale(1);
-        opacity: 1;
-    }
+    0% { transform: translateX(-50%) scale(0.9); opacity: 0; }
+    100% { transform: translateX(-50%) scale(1); opacity: 1; }
 }
 
 @keyframes shake {
-    0%, 100% {
-        transform: translateX(-50%) scale(1);
-    }
-    25% {
-        transform: translateX(-54%) scale(1);
-    }
-    50% {
-        transform: translateX(-46%) scale(1);
-    }
-    75% {
-        transform: translateX(-52%) scale(1);
-    }
+    0%, 100% { transform: translateX(-50%); }
+    50% { transform: translateX(-48%); }
 }
 
 @keyframes fadeOut {
-    0% {
-        opacity: 1;
-        transform: translateX(-50%) scale(1);
-    }
-    100% {
-        opacity: 0;
-        transform: translateX(-50%) scale(0.8);
-    }
+    0% { opacity: 1; }
+    100% { opacity: 0; }
 }
 
 #about p {
@@ -659,6 +635,9 @@ p {
     }
     #about img {
         width: 180px;
+        height: 180px;
+        border-radius: 50%;
+        object-fit: cover;
     }
     .books-grid, .poems-grid, .notes-grid {
         position: relative;
@@ -725,7 +704,7 @@ p {
     .translation-item a {
         display: inline-block;
         padding: 8px 15px;
-        background: #1A1A1A;
+        background: #4A4A4A;
         color: #FFFFFF;
         text-decoration: none;
         border-radius: 5px;
@@ -942,7 +921,7 @@ p {
 .donate-item .donate-btn {
     display: inline-block;
     padding: 8px 15px;
-    background: #1A1A1A;
+    background: #4A4A4A;
     color: #FFFFFF;
     text-decoration: none;
     border-radius: 5px;
@@ -958,7 +937,7 @@ p {
 }
 
 .donate-item .donate-btn:hover {
-    background: #333;
+    background: #6B7280;
 }
 
 @media (max-width: 768px) {
@@ -987,7 +966,10 @@ p {
         z-index: 10;
     }
 }
+
 i[class^="fa-"] {
     font-family: "Font Awesome 6 Free", "Font Awesome 6 Brands" !important;
     display: inline-block;
 }
+
+.hidden { display: none; }
